@@ -3,6 +3,7 @@ const app = express()
 const path = require("path");
 const db = require("./config/mongsose-connection")
 const cookieParser = require("cookie-parser")
+const PORT = process.env.PORT || 3000
 
 require("dotenv").config()
 
@@ -36,4 +37,6 @@ app.use(cookieParser())
 app.use('/', indexRouter)
 app.use('/hisaab', hisaabRouter)
 
-app.listen(3000)
+app.listen(PORT,()=>{
+  console.log(`Server is runing on ${PORT}`);
+})

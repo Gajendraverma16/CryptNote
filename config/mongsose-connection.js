@@ -1,7 +1,13 @@
+
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://127.0.0.1:27017/khatabookcompleted").then( function(){
-    console.log("Connect")
+mongoose.connect('mongodb://localhost:27017/khatabookcompleted', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+}).then(() => {
+  console.log('Database connection successful');
+}).catch((err) => {
+  console.error('Database connection error:', err);
 });
 
 let db = mongoose.connection;

@@ -1,7 +1,7 @@
 
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/khatabookcompleted', {
+mongoose.connect('mongodb+srv://gajendraverma353:5Yk0wRwJm8jNSFAY@cluster0.bt6pfsh.mongodb.net/Khatabook', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   serverSelectionTimeoutMS: 10000 
@@ -11,6 +11,5 @@ mongoose.connect('mongodb://127.0.0.1:27017/khatabookcompleted', {
   console.error('Database connection error:', err);
 });
 
-let db = mongoose.connection;
-
+let db = mongoose.connection
 module.exports = db;

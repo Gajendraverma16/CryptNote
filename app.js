@@ -3,7 +3,7 @@ const app = express()
 const path = require("path");
 const db = require("./config/mongsose-connection")
 const cookieParser = require("cookie-parser")
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 require("dotenv").config()
 

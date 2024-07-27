@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khatabook</title>
+    <title>CryptNote</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -12,7 +12,7 @@
 
 <body>
     <div class="navbar flex justify-between items-center flex-wrap w-full px-20 py-10 ">
-        <h2 class="font-[400] text-[28px]  ">Khatabook</h2>
+        <h2 class="font-[400] text-[28px]  ">CryptNote</h2>
         <% if (success_msg) { %>
           <div class="alert-danger absolute top-[12%] left-[46%] px-3 py-2  text-green-600 bg-white rounded-md "><%= success_msg %></div>
       <% } %>
@@ -21,7 +21,7 @@
       <% } %>
         <div class="links flex gap-2">
             <a class=" mr-1 bg-blue-500 text-white px-4 py-2 rounded-lg" href="/profile">Home</a>   
-            <a class=" mr-1 bg-blue-500 text-white px-4 py-2 rounded-lg" href="/create">Create New Hisaab</a>
+            <a class=" mr-1 bg-blue-500 text-white px-4 py-2 rounded-lg" href="/create">Create New Note</a>
             <a class=" mr-1 bg-blue-500 text-white px-4 py-2 rounded-lg" href="/upload">Upload Profile</a>
             <a href="/logout" class="mr-1 bg-red-500 text-white px-4 py-2 rounded-lg" >Logout</a> 
         </div>

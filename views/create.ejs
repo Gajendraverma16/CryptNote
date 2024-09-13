@@ -1,40 +1,42 @@
 <%- include('./partials/header.ejs') %>
-    <div class="container mx-auto  h-full w-full">
-        <div class="max-w-lg mx-auto bg-white   h-full w-full  rounded-lg ">
-            <h2 class="text-2xl font-semibold mb-4">Create New Note</h2>
-            <form action="/create" method="post">
+<div class="bg-zinc-800 h-full w-full" >
+    <div class="container mx-auto  h-full w-full over bg-zinc-800">
+        <div class="max-w-lg mx-auto  pt-20 h-full w-full rounded-lg bg-zinc-800">
+            <h2 class="text-2xl font-semibold mb-4 text-zinc-200 bg-zinc-800">Create New Note</h2>
+            <form action="/create" method="post" class=" bg-zinc-800">
                 <div class="mb-4">
                     <input name="title" type="text" required placeholder="Anything "
-                        class="w-full p-2 border border-gray-300 rounded">
+                        class="w-full p-2 border border-gray-200 rounded ">
                 </div>
                 <div class="mb-4">
                     <textarea name="description" required placeholder="Details"
-                        class="resize-none w-full p-2 border border-gray-300 rounded h-32"></textarea>
+                        class="resize-none w-full p-2 border border-gray-200 rounded h-32"></textarea>
                 </div>
                 <div class="mb-4">
                     <label class="inline-flex items-center">
                         <input name="encrypted" type="checkbox" class="form-checkbox">
-                        <span class="ml-2">Encrypt this file</span>
+                        <span class="ml-2 text-zinc-200">Encrypt this file</span>
                     </label>
                     <input name="passcode" type="password" placeholder="Passcode"
-                        class="w-full mt-2 p-2 border border-gray-300 rounded">
+                        class="w-full mt-2 p-2 border border-gray-200 rounded ">
                 </div>
                 <div class="mb-4">
                     <label class="inline-flex items-center">
-                        <input name="shareable" type="checkbox" class="form-checkbox">
-                        <span class="ml-2">Shareable file?</span>
+                        <input name="shareable" type="checkbox" class="form-checkbox text-zinc-200">
+                        <span class="ml-2 text-zinc-200">Shareable file?</span>
                     </label>
                 </div>
                 <div class="mb-4">
                     <label class="inline-flex items-center">
-                        <input name="editpermissions" type="checkbox" class="form-checkbox">
-                        <span class="ml-2">Edit permissions.</span>
+                        <input name="editpermissions" type="checkbox" class="form-checkbox text-zinc-200">
+                        <span class="ml-2 text-zinc-200">Edit permissions.</span>
                     </label>
                 </div>
                 <div>
-                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Create New Note</button>
+                    <button type="submit" class="w-40 ml-40  bg-blue-500 text-white p-2 rounded">Create New Note</button>
                 </div>
             </form>
         </div>
     </div>
+</div>
     <%- include('./partials/footer.ejs') %>

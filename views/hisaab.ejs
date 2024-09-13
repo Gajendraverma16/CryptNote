@@ -1,28 +1,28 @@
 <%- include('./partials/header.ejs') %>
-    <div class="max-w-2xl mx-auto p-6 bg-white rounded-lg mt-10">
+    <div class="max-w-2xl mx-auto p-6 rounded-lg mt-10 bg-zinc-800 text-zinc-200">
         <div
             class="absolute copieddiv hidden top-10 left-1/2 -translate-x-1/2 -translate-y-1/2 px-3 py-2 bg-blue-500 rounded-md">
             <h3 class="text-blue-200 text-xl">
                 link copied
             </h3>
         </div>
-        <div class="flex justify-between items-center mb-4">
-            <div class="flex space-x-4">
+        <div class="flex justify-between items-center mb-4 bg-zinc-800 text-zinc-200">
+            <div class="flex space-x-4 bg-zinc-800">
                 <% if(users.encrypted){ %>
                     <button class="bg-blue-500 text-white px-4 py-2 rounded">Encrypted</button>
                     <% } else { %>
                     <button class="bg-teal-600  text-white px-4 py-2 rounded">Available</button>
                     <% } %>
-                <button class="sharebtn text-gray-700 px-4 py-2 rounded flex items-center space-x-2">
+                <button class="sharebtn text-gray-700 px-4 py-2 rounded flex items-center space-x-2 text-zinc-200 bg-blue-500">
                     <span id="copyUrl">Share as a link</span>
                 </button>
-                <a href="/hisaab/delete/<%= users._id %>" class="bg-red-500 text-white px-4 py-2 rounded">Delete</a>
-                <a href="/hisaab/edit/<%= users._id %>" class="bg-yellow-400 text-white px-4 py-2 rounded">Edit</a>
+                <a href="/hisaab/delete/<%= users._id %>" class="bg-red-500 text-white px-4 py-2 rounded text-zinc-200">Delete</a>
+                <a href="/hisaab/edit/<%= users._id %>" class="bg-yellow-400 text-white px-4 py-2 rounded text-zinc-200">Edit</a>
             </div>
         </div>
-        <div class="text-gray-500 mb-4">Created on <%= users.date %></div>
-        <h2 class="text-xl font-semibold mb-2"><%=users.title%></h2>
-        <p class="text-gray-700 "><%=users.description%></p>
+        <div class="text-gray-500 mb-4 text-zinc-200">Created on <%= users.date %></div>
+        <h2 class="text-xl font-semibold mb-2 text-zinc-200"><%=users.title%></h2>
+        <p class="text-gray-700 text-zinc-300"><%=users.description%></p>
     </div>
 
 

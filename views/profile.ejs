@@ -1,8 +1,8 @@
 <%- include('./partials/header.ejs') %>
-    <div class="h-[100%] w-[100%] overflow-hidden  px-20 py-2 ">
+    <div class="h-[100%] w-[100%] overflow-hidden  px-20 py-2 bg-zinc-800 ">
         <div class="flex gap-3 ml-3  items-center justify-start ">
         <img class="h-14 w-14 rounded-lg object-cover  overflow-hidden" src="/images/uploads/<%= user.profilepic %>" alt="">
-        <h1 class="text-3xl mb-4 ">Hey, <%=user.name%> 👋🏻 </h1>
+        <h1 class="text-3xl mb-4 text-zinc-200">Hey, <%=user.name%> 👋🏻 </h1>
        </div>
         <div>
             <form class="flex mb-8  mt-8 gap-5" action="/profile" method="get">
@@ -15,11 +15,11 @@
                     <input class="bg-zinc-200 text-sm px-4 py-2 rounded-md" name="startDate" type="date">
                     <input class="bg-zinc-200 text-sm px-4 py-2 rounded-md" name="endDate" type="date">
                 </div>
-                <select class="outline-none  text-sm" name="byDate" id="">
-                    <option value="-1" >Newest First</option>
-                    <option value="1" >Oldest First</option>
+                <select class="bg-zinc-200 text-sm px-4 py-2 rounded-md text-zinc-500" name="byDate" id="">
+                    <option value="-1"  class="bg-zinc-200 text-sm px-4 py-2 rounded-md text-zinc-500" >Newest First</option>
+                    <option value="1"  class="bg-zinc-200 text-sm px-4 py-2 rounded-md text-zinc-500" >Oldest First</option>
                 </select>
-                <input class="px-6 py-2 bg-blue-500 text-white rounded-md" type="submit" value="Filter">
+                <input class="px-6 py-2 bg-blue-500 text-white rounded-md " type="submit" value="Filter">
             </form>
         </div>
        <div class=" mt-2 flex flex-wrap justify-start gap-2  ">

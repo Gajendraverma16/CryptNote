@@ -10,23 +10,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="navbar flex  h-full w-full px-20 py-10">
-        <h2 class="font-[400] text-[28px] mt-5 ">CryptNote</h2>
+    <div class="navbar flex  h-full w-full px-20 py-10 bg-zinc-800">
+        <h2 class="font-[400] text-[28px] mt-5 text-zinc-200 ">CryptNote</h2>
         <% if (success_msg) { %>
-            <div class="alert-danger absolute top-[12%] left-[48%] px-3 py-2  text-green-600 bg-white rounded-md "><%= success_msg %></div>
+            <div class="alert-danger absolute top-[12%] left-[48%] px-3 py-2  text-green-600 bg-zinc-800 rounded-md "><%= success_msg %></div>
         <% } %>
         <% if (error) { %>
-            <div class="alert-danger absolute top-[12%] left-[48%] px-3 py-2  text-red-600 bg-white rounded-md "><%= error %></div>
+            <div class="alert-danger absolute top-[12%] left-[48%] px-3 py-2  text-red-600 bg-zinc-800 rounded-md "><%= error %></div>
         <% } %>
     <div class="logincontainer w-full h-[100%] flex items-center justify-center">
         <div class="loginpanel">
-            <h3 class="text-2xl mb-5 ml-16">Login</h3>
-            <form action="/login" class="flex flex-col gap-2 items-start" method="post">
-                <input class="block px-3 py-2 border-[1px] border-zinc-200 rounded-md" required type="text"
+            <h3 class="text-2xl mb-5 ml-16 text-zinc-200">Login</h3>
+            <form action="/login" class="flex flex-col gap-2 items-start " method="post">
+                <input class="block px-3 py-2 border-[1px] border-zinc-200 rounded-md bg-zinc-200" required type="text"
                     placeholder="Email" name="email">
-                <input class="block px-3 py-2 border-[1px] border-zinc-200 rounded-md" required type="password"
+                <input class="block px-3 py-2 border-[1px] border-zinc-200 rounded-md bg-zinc-200" required type="password"
                     placeholder="password" name="password">
-                <input class="block px-4 py-2 ml-16 mt-2 bg-blue-500 rounded-md text-white" type="submit" value="Login">
+                <input class="block px-4 py-2 ml-16 mt-2 bg-blue-500 rounded-md text-white " type="submit" value="Login">
             </form>
             <a class="mt-2 inline-block ml-5 text-blue-500" href="/register">Don't have an account ?</a>
         </div>

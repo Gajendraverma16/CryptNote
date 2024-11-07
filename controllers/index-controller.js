@@ -49,8 +49,7 @@ module.exports.postregisterController =  async function(req, res){
                   })
                   let token = jwt.sign({email:user.email, userid :user._id},process.env.JWT_KEY)
                   res.cookie("token",token);
-                  req.flash('success_msg', 'Account Created Please Login');
-                  res.redirect('/');
+                  res.redirect('/profile');
             })
         })
     }catch(error){
